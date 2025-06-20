@@ -41,6 +41,26 @@ class Netstat {
             this.updateInfo();
         }, 2000);
 
+        this.paused = false;
+
+        this.pause = () => {
+            if (this.infoUpdater) {
+                clearInterval(this.infoUpdater);
+                this.infoUpdater = null;
+                this.paused = true;
+            }
+        };
+
+        this.resume = () => {
+            if (!this.infoUpdater) {
+                this.updateInfo();
+                this.infoUpdater = setInterval(() => {
+                    this.updateInfo();
+                }, 2000);
+                this.paused = false;
+            }
+        };
+
         // Init GeoIP integrated backend
         this.geoLookup = {
             get: () => null

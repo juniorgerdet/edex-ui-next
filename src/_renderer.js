@@ -1160,3 +1160,19 @@ electronWin.on("resize", () => {
 electronWin.on("leave-full-screen", () => {
     electron.remote.getCurrentWindow().setSize(960, 540);
 });
+
+electronWin.on("blur", () => {
+    if (window.mods) {
+        Object.values(window.mods).forEach(mod => {
+            if (typeof mod.pause === "function") mod.pause();
+        });
+    }
+});
+
+electronWin.on("focus", () => {
+    if (window.mods) {
+        Object.values(window.mods).forEach(mod => {
+            if (typeof mod.resume === "function") mod.resume();
+        });
+    }
+});

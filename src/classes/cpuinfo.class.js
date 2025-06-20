@@ -120,6 +120,50 @@ class Cpuinfo {
             }, 5000);
         });
     }
+    pause() {
+        if (this.loadUpdater) {
+            clearInterval(this.loadUpdater);
+            this.loadUpdater = null;
+        }
+        if (this.tempUpdater) {
+            clearInterval(this.tempUpdater);
+            this.tempUpdater = null;
+        }
+        if (this.speedUpdater) {
+            clearInterval(this.speedUpdater);
+            this.speedUpdater = null;
+        }
+        if (this.tasksUpdater) {
+            clearInterval(this.tasksUpdater);
+            this.tasksUpdater = null;
+        }
+    }
+    resume() {
+        if (!this.loadUpdater) {
+            this.updateCPUload();
+            this.loadUpdater = setInterval(() => {
+                this.updateCPUload();
+            }, 500);
+        }
+        if (process.platform !== "win32" && !this.tempUpdater) {
+            this.updateCPUtemp();
+            this.tempUpdater = setInterval(() => {
+                this.updateCPUtemp();
+            }, 2000);
+        }
+        if (!this.speedUpdater) {
+            this.updateCPUspeed();
+            this.speedUpdater = setInterval(() => {
+                this.updateCPUspeed();
+            }, 1000);
+        }
+        if (!this.tasksUpdater) {
+            this.updateCPUtasks();
+            this.tasksUpdater = setInterval(() => {
+                this.updateCPUtasks();
+            }, 5000);
+        }
+    }
     updateCPUload() {
         if (this.updatingCPUload) return;
         this.updatingCPUload = true;

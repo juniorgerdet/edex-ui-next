@@ -66,6 +66,24 @@ class FilesystemDisplay {
             }
         }, 1000);
 
+        this.pause = () => {
+            if (this._timer) {
+                clearInterval(this._timer);
+                this._timer = null;
+            }
+        };
+
+        this.resume = () => {
+            if (!this._timer) {
+                this._timer = setInterval(() => {
+                    if (this._runNextTick === true) {
+                        this._runNextTick = false;
+                        this.readFS(this.dirpath);
+                    }
+                }, 1000);
+            }
+        };
+
         this._asyncFSwrapper = new Proxy(fs, {
             get: function(fs, prop) {
                 if (prop in fs) {

@@ -18,6 +18,20 @@ class Clock {
             this.updateClock();
         }, 1000);
     }
+    pause() {
+        if (this.updater) {
+            clearInterval(this.updater);
+            this.updater = null;
+        }
+    }
+    resume() {
+        if (!this.updater) {
+            this.updateClock();
+            this.updater = setInterval(() => {
+                this.updateClock();
+            }, 1000);
+        }
+    }
     updateClock() {
         let time = new Date();
         let array = [time.getHours(), time.getMinutes(), time.getSeconds()];

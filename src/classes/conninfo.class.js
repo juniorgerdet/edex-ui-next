@@ -61,6 +61,20 @@ class Conninfo {
             this.updateInfo();
         }, 1000);
     }
+    pause() {
+        if (this.infoUpdater) {
+            clearInterval(this.infoUpdater);
+            this.infoUpdater = null;
+        }
+    }
+    resume() {
+        if (!this.infoUpdater) {
+            this.updateInfo();
+            this.infoUpdater = setInterval(() => {
+                this.updateInfo();
+            }, 1000);
+        }
+    }
     updateInfo() {
         let time = new Date().getTime();
 

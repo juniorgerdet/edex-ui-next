@@ -35,6 +35,20 @@ class RAMwatcher {
             this.updateInfo();
         }, 1500);
     }
+    pause() {
+        if (this.infoUpdater) {
+            clearInterval(this.infoUpdater);
+            this.infoUpdater = null;
+        }
+    }
+    resume() {
+        if (!this.infoUpdater) {
+            this.updateInfo();
+            this.infoUpdater = setInterval(() => {
+                this.updateInfo();
+            }, 1500);
+        }
+    }
     updateInfo() {
         if (this.currentlyUpdating) return;
         this.currentlyUpdating = true;

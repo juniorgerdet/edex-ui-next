@@ -54,6 +54,7 @@ Click the banner below and sign up to **Bytes**, the only newsletter cool enough
 - Real-time system (CPU, RAM, swap, processes) and network (GeoIP, active connections, transfer rates) monitoring.
 - Full support for touch-enabled displays, including an on-screen keyboard.
 - Directory viewer that follows the CWD (current working directory) of the terminal.
+- Automatically pauses monitoring modules when the window loses focus and resumes when focus returns.
 - Advanced customization using themes, on-screen keyboard layouts, CSS injections. See the [wiki](https://github.com/GitSquared/edex-ui/wiki) for more info.
 - Optional sound effects made by a talented sound designer for maximum hollywood hacking vibe.
 
