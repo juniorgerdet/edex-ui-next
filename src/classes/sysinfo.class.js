@@ -45,6 +45,38 @@ class Sysinfo {
         this.batteryUpdater = setInterval(() => {
             this.updateBattery();
         }, 3000);
+        this.dateTimeout = null;
+    }
+    pause() {
+        if (this.uptimeUpdater) {
+            clearInterval(this.uptimeUpdater);
+            this.uptimeUpdater = null;
+        }
+        if (this.batteryUpdater) {
+            clearInterval(this.batteryUpdater);
+            this.batteryUpdater = null;
+        }
+        if (this.dateTimeout) {
+            clearTimeout(this.dateTimeout);
+            this.dateTimeout = null;
+        }
+    }
+    resume() {
+        if (!this.uptimeUpdater) {
+            this.updateUptime();
+            this.uptimeUpdater = setInterval(() => {
+                this.updateUptime();
+            }, 60000);
+        }
+        if (!this.batteryUpdater) {
+            this.updateBattery();
+            this.batteryUpdater = setInterval(() => {
+                this.updateBattery();
+            }, 3000);
+        }
+        if (!this.dateTimeout) {
+            this.updateDate();
+        }
     }
     updateDate() {
         let time = new Date();
@@ -93,7 +125,7 @@ class Sysinfo {
         document.querySelector("#mod_sysinfo > div:first-child > h2").innerHTML = month+" "+time.getDate();
 
         let timeToNewDay = ((23 - time.getHours()) * 3600000) + ((59 - time.getMinutes()) * 60000);
-        setTimeout(() => {
+        this.dateTimeout = setTimeout(() => {
             this.updateDate();
         }, timeToNewDay);
     }

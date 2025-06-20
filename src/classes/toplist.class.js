@@ -19,6 +19,20 @@ class Toplist {
             this.updateList();
         }, 2000);
     }
+    pause() {
+        if (this.listUpdater) {
+            clearInterval(this.listUpdater);
+            this.listUpdater = null;
+        }
+    }
+    resume() {
+        if (!this.listUpdater) {
+            this.updateList();
+            this.listUpdater = setInterval(() => {
+                this.updateList();
+            }, 2000);
+        }
+    }
     updateList() {
         if (this.currentlyUpdating) return;
 

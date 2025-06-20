@@ -133,6 +133,32 @@ class LocationGlobe {
         }, 4000);
     }
 
+    pause() {
+        if (this.locUpdater) {
+            clearInterval(this.locUpdater);
+            this.locUpdater = null;
+        }
+        if (this.connsUpdater) {
+            clearInterval(this.connsUpdater);
+            this.connsUpdater = null;
+        }
+    }
+
+    resume() {
+        if (!this.locUpdater) {
+            this.updateLoc();
+            this.locUpdater = setInterval(() => {
+                this.updateLoc();
+            }, 1000);
+        }
+        if (!this.connsUpdater) {
+            this.updateConns();
+            this.connsUpdater = setInterval(() => {
+                this.updateConns();
+            }, 3000);
+        }
+    }
+
     addRandomConnectedMarkers() {
         const randomLat = this.getRandomInRange(40, 90, 3);
         const randomLong = this.getRandomInRange(-180, 0, 3);

@@ -28,6 +28,20 @@ class HardwareInspector {
             this.updateInfo();
         }, 20000);
     }
+    pause() {
+        if (this.infoUpdater) {
+            clearInterval(this.infoUpdater);
+            this.infoUpdater = null;
+        }
+    }
+    resume() {
+        if (!this.infoUpdater) {
+            this.updateInfo();
+            this.infoUpdater = setInterval(() => {
+                this.updateInfo();
+            }, 20000);
+        }
+    }
     updateInfo() {
         window.si.system().then(d => {
             window.si.chassis().then(e => {
