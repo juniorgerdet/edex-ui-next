@@ -2,31 +2,25 @@
   <br>
   <img alt="Logo" src="media/logo.png">
   <br><br>
-  <a href="https://lgtm.com/projects/g/GitSquared/edex-ui/context:javascript"><img alt="JavaScript grade" src="https://img.shields.io/lgtm/grade/javascript/g/GitSquared/edex-ui.svg?logo=lgtm&logoWidth=18"/></a>
+  <a href="https://github.com/yourusername/eDEX-UI-NEXT"><img alt="Maintained" src="https://img.shields.io/badge/maintained-yes-brightgreen"></a>
+  <a href="https://github.com/yourusername/eDEX-UI-NEXT/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/release/yourusername/eDEX-UI-NEXT.svg?style=popout"></a>
+  <a href="https://github.com/yourusername/eDEX-UI-NEXT/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/yourusername/eDEX-UI-NEXT.svg?style=popout"></a>
   <br>
-  <a href="https://github.com/GitSquared/edex-ui/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/release/GitSquared/edex-ui.svg?style=popout"></a>
-  <a href="#featured-in"><img alt="Downloads" src="https://img.shields.io/github/downloads/GitSquared/edex-ui/total.svg?style=popout"></a>
-  <a href="https://github.com/GitSquared/edex-ui/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/GitSquared/edex-ui.svg?style=popout"></a>
+  <!-- Update or add your own download badges here -->
   <br>
-  <a href="https://github.com/GitSquared/edex-ui/releases/download/v2.2.8/eDEX-UI-Windows.exe" target="_blank"><img alt="Download Windows" src="https://badgen.net/badge/Download/Windows/?color=blue&icon=windows&label"></a>
-  <a href="https://github.com/GitSquared/edex-ui/releases/download/v2.2.8/eDEX-UI-macOS.dmg" target="_blank"><img alt="Download macOS" src="https://badgen.net/badge/Download/macOS/?color=grey&icon=apple&label"></a>
-  <a href="https://github.com/GitSquared/edex-ui/releases/download/v2.2.8/eDEX-UI-Linux-x86_64.AppImage" target="_blank"><img alt="Download Linux64" src="https://badgen.net/badge/Download/Linux64/?color=orange&icon=terminal&label"></a>
-  <a href="https://github.com/GitSquared/edex-ui/releases/download/v2.2.8/eDEX-UI-Linux-arm64-AppImage" target="_blank"><img alt="Download LinuxArm64" src="https://badgen.net/badge/Download/LinuxArm64/?color=orange&icon=terminal&label"></a>
-  <a href="https://aur.archlinux.org/packages/edex-ui" target="_blank"><img alt="AUR Package" src="https://badgen.net/badge/AUR/Package/cyan"></a>
-  <br>
-  <a href="https://github.com/GitSquared/edex-ui/releases/tag/v2.2.8"><strong><i>(Project archived Oct. 18th 2021)</i></strong></a>
+  <a href="https://github.com/GitSquared/edex-ui/releases/tag/v2.2.8"><strong><i>(Original project archived Oct. 18th 2021)</i></strong></a>
   <br><br><br>
 </p>
 
-> **:warning: This is a community-maintained fork!**
+> **:rocket: Welcome to eDEX-UI-NEXT!**
 >
-> **Project status:** _Actively maintained in 2025. Now fully compatible with modern Linux (Debian/Ubuntu 2025). Major performance improvements—lower CPU & memory usage!_
+> **Project status:** _Actively maintained and improved in 2025. Now fully compatible with modern Linux (Debian/Ubuntu 2025+), and with major performance improvements—lower CPU & memory usage!_
 >
-> This fork revives the [original eDEX-UI](https://github.com/GitSquared/edex-ui) (archived 2021), bringing support for new systems, fresh updates, and active support. See below for what's new!
+> eDEX-UI-NEXT is a community-powered fork of the legendary [eDEX-UI](https://github.com/GitSquared/edex-ui), bringing the sci-fi terminal into the future. See below for what’s new!
 
 ---
 
-eDEX-UI is a fullscreen, cross-platform terminal emulator and system monitor that looks and feels like a sci-fi computer interface.
+eDEX-UI-NEXT is a fullscreen, cross-platform terminal emulator and system monitor that looks and feels like a sci-fi computer interface.
 
 ---
 
@@ -34,7 +28,7 @@ eDEX-UI is a fullscreen, cross-platform terminal emulator and system monitor tha
   <img align="right" width="400" alt="Demo on YouTube" src="media/youtube-demo-teaser.gif">
 </a>
 
-Heavily inspired by the [TRON Legacy movie effects](https://web.archive.org/web/20170511000410/http://jtnimoy.com/blogs/projects/14881671) (especially the [Board Room sequence](https://gmunk.com/TRON-Board-Room)), the eDEX-UI project was originally meant to be *"[DEX-UI](https://github.com/seenaburns/dex-ui) with less « art » and more « distributable software »"*.
+Heavily inspired by the [TRON Legacy movie effects](https://web.archive.org/web/20170511000410/http://jtnimoy.com/blogs/projects/14881671) (especially the [Board Room sequence](https://gmunk.com/TRON-Board-Room)), the original eDEX-UI project was meant to be *"[DEX-UI](https://github.com/seenaburns/dex-ui) with less « art » and more « distributable software »"*.
 
 While keeping a futuristic look and feel, it strives to maintain a certain level of functionality and to be usable in real-life scenarios, with the larger goal of bringing science-fiction UXs to the mainstream.
 
@@ -50,7 +44,7 @@ It might or might not be a joke taken too seriously.
 
 ---
 
-## What's New in This Fork? 🚀
+## What's New in eDEX-UI-NEXT? 🚀
 
 - **2025 Compatibility:** Runs flawlessly on the latest Debian/Ubuntu and other modern Linux systems.
 - **Performance Boost:** Optimized to consume less CPU and memory.
@@ -58,16 +52,6 @@ It might or might not be a joke taken too seriously.
 - **More improvements coming—your contributions are welcome!**
 
 _See [CHANGELOG.md](./CHANGELOG.md) for full technical details._
-
----
-
-## Sponsor
-
-**Want to help support my open-source experiments and learn some cool JavaScript tricks at the same time?**
-
-Click the banner below and sign up to **Bytes**, the only newsletter cool enough to be recommended by eDEX-UI.
-
-[![Bytes by UI.dev](media/sponsor-uidev-bytes.jpg)](https://ui.dev/bytes/?r=gabriel)
 
 ---
 
@@ -79,57 +63,52 @@ Click the banner below and sign up to **Bytes**, the only newsletter cool enough
 - Directory viewer that follows the CWD (current working directory) of the terminal.
 - Automatically pauses monitoring modules when the window loses focus and resumes when focus returns.
 - Advanced customization using themes, on-screen keyboard layouts, CSS injections. See the [wiki](https://github.com/GitSquared/edex-ui/wiki) for more info.
-- Optional sound effects made by a talented sound designer for maximum hollywood hacking vibe.
+- Optional sound effects made by a talented sound designer for maximum Hollywood hacking vibe.
 
 ---
 
 ## Screenshots
 
 ![Default screenshot](media/screenshot_default.png)
-_[neofetch](https://github.com/dylanaraps/neofetch) on eDEX-UI 2.2 with the default "tron" theme & QWERTY keyboard_
+_[neofetch](https://github.com/dylanaraps/neofetch) on eDEX-UI with the default "tron" theme & QWERTY keyboard_
 
 ![Blade screenshot](media/screenshot_blade.png)
-_Checking out available themes in [eDEX's config dir](https://github.com/GitSquared/edex-ui/wiki/userData) with [`ranger`](https://github.com/ranger/ranger) on eDEX-UI 2.2 with the "blade" theme_
+_Checking out available themes in [eDEX's config dir](https://github.com/GitSquared/edex-ui/wiki/userData) with [`ranger`](https://github.com/ranger/ranger) and the "blade" theme_
 
 ![Disrupted screenshot](media/screenshot_disrupted.png)
-_[cmatrix](https://github.com/abishekvashok/cmatrix) on eDEX-UI 2.2 with the experimental "tron-disrupted" theme, and the user-contributed DVORAK keyboard_
+_[cmatrix](https://github.com/abishekvashok/cmatrix) with the experimental "tron-disrupted" theme, and the user-contributed DVORAK keyboard_
 
 ![Horizon screenshot](media/screenshot_horizon.png)
-_Editing eDEX-UI source code with `nvim` on eDEX-UI 2.2 with the custom [`horizon-full`](https://github.com/GitSquared/horizon-edex-theme) theme_
+_Editing eDEX-UI source code with `nvim` and the custom [`horizon-full`](https://github.com/GitSquared/horizon-edex-theme) theme_
 
 ---
 
 ## Q&A
 
 #### How do I get it?
-Click on the little badges under the eDEX logo at the top of this page, or go to the [Releases](https://github.com/GitSquared/edex-ui/releases) tab, or download it through [one of the available repositories](https://repology.org/project/edex-ui/versions) (Homebrew, AUR...).
+Check the badges at the top, visit the [Releases](https://github.com/yourusername/eDEX-UI-NEXT/releases) tab, or download via [repositories](https://repology.org/project/edex-ui/versions) (Homebrew, AUR, etc).
 
 Public release binaries are unsigned ([why](https://gaby.dev/posts/code-signing)). On Linux, you will need to `chmod +x` the AppImage file in order to run it.
 
 #### I have a problem!
-Search through the [Issues](https://github.com/GitSquared/edex-ui/issues) to see if yours has already been reported. If you're confident it hasn't been reported yet, feel free to open up a new one. If you see your issue and it's been closed, it probably means that the fix for it will ship in the next version, and you'll have to wait a bit.
+Search through the [Issues](https://github.com/yourusername/eDEX-UI-NEXT/issues) to see if yours has already been reported. If not, open a new issue!
 
 #### Can you disable the keyboard/the filesystem display?
 You can't disable them (yet) but you can hide them. See the `tron-notype` theme.
 
 #### Why is the file browser saying that "Tracking Failed"? (Windows only)
 On Linux and macOS, eDEX tracks where you're going in your terminal tab to display the content of the current folder on-screen.  
-Sadly, this is technically impossible to do on Windows right now, so the file browser reverts back to a "detached" mode. You can still use it to browse files & directories and click on files to input their path in the terminal.
+On Windows, this isn't possible yet, so the file browser runs in "detached" mode. You can still browse files & directories and click files to input their path in the terminal.
 
 #### Can this run on a Raspberry Pi / ARM device?
 We provide prebuilt arm64 builds. For other platforms, see [this issue comment](https://github.com/GitSquared/edex-ui/issues/313#issuecomment-443465345), and the thread on issue [#818](https://github.com/GitSquared/edex-ui/issues/818).
 
 #### Is this repo actively maintained?
-**Yes! This is a maintained fork as of 2025, bringing eDEX-UI to the latest Linux distributions and improving performance.**  
-See [What's New](#whats-new-in-this-fork-) above.
+**Yes! eDEX-UI-NEXT is a modern, maintained fork as of 2025, bringing eDEX-UI to the latest Linux distributions and improving performance.**  
+See [What's New](#whats-new-in-edex-ui-next-) above.
 
 #### How did you make this?
 Glad you're interested! See [#272](https://github.com/GitSquared/edex-ui/issues/272).
-
-#### This is so cool.
-Thanks! If you feel like it, you can [follow me on Twitter](https://gaby.dev/twitter) to hear about new stuff I'm making.
-
-<img width="220" src="https://78.media.tumblr.com/35d4ef4447e0112f776b629bffd99188/tumblr_mk4gf8zvyC1s567uwo1_500.gif" />
 
 ---
 
@@ -157,10 +136,10 @@ Thanks! If you feel like it, you can [follow me on Twitter](https://gaby.dev/twi
 
 ## Useful commands for the nerds
 
-**IMPORTANT NOTE:** The following instructions are meant for running eDEX from the latest unoptimized, unreleased, development version. If you'd like to get stable software instead, refer to [these](#how-do-i-get-it) instructions.
+**IMPORTANT NOTE:** The following instructions are for running eDEX-UI-NEXT from source (unoptimized/development). For stable software, see [How do I get it?](#how-do-i-get-it).
 
 #### Starting from source:
-On *nix systems (You'll need the Xcode command line tools on macOS):
+On *nix systems (You'll need Xcode command line tools on macOS):
 
 - clone the repository
 - `npm run install-linux`
@@ -168,47 +147,39 @@ On *nix systems (You'll need the Xcode command line tools on macOS):
 
 On Windows:
 
-- start cmd or powershell **as administrator**
+- start cmd or PowerShell **as administrator**
 - clone the repository
 - `npm run install-windows`
 - `npm run start`
 
 #### Building
-Note: Due to native modules, you can only build targets for the host OS you are using.
+Note: Due to native modules, you can only build for the host OS.
 
 - `npm install` (NOT `install-linux` or `install-windows`)
 - `npm run build-linux` or `build-windows` or `build-darwin`
 
-The script will minify the source code, recompile native dependencies and create distributable assets in the `dist` folder.
+The script will minify, recompile, and create distributable assets in the `dist` folder.
 
 #### Getting the bleeding edge
-If you're interested in running the latest in-development version but don't want to compile source code yourself, you can get pre-built nightly binaries on [GitHub Actions](https://github.com/GitSquared/edex-ui/actions): click the latest commits, and download the artifacts bundle for your OS.
+For the latest development binaries, visit [GitHub Actions](https://github.com/GitSquared/edex-ui/actions), click the latest commit, and download the artifacts for your OS.
 
 ---
 
 ## Credits
 
-eDEX-UI's source code was primarily written by [Squared](https://github.com/GitSquared). If you want to get in touch with them or find other projects they're involved in, check out [their website](https://gaby.dev).
-
-[PixelyIon](https://github.com/PixelyIon) helped with Windows compatibility and early advice.
-
+Original eDEX-UI by [Squared](https://github.com/GitSquared).  
+[PixelyIon](https://github.com/PixelyIon) helped with Windows compatibility and early advice.  
 [IceWolf](https://soundcloud.com/iamicewolf) composed the sound effects on v2.1.x and above.
 
 ---
 
 ## Thanks
 
-eDEX would never have existed without the amazing work of [Seena](https://github.com/seenaburns) on [r/unixporn](https://reddit.com/r/unixporn).
-
-This project uses a bunch of open-source libraries, frameworks, and tools, see [the full dependency graph](https://github.com/GitSquared/edex-ui/network/dependencies).
-
-Special thanks to [xterm.js](https://github.com/xtermjs/xterm.js), [systeminformation](https://github.com/sebhildebrandt/systeminformation), [SmoothieCharts](https://github.com/joewalnes/smoothie), and [Rob "Arscan" Scanlon](https://github.com/arscan) for [ENCOM Globe](https://github.com/arscan/encom-globe).
+Special thanks to [Seena](https://github.com/seenaburns) and the r/unixporn community.  
+Also to the developers of [xterm.js](https://github.com/xtermjs/xterm.js), [systeminformation](https://github.com/sebhildebrandt/systeminformation), [SmoothieCharts](https://github.com/joewalnes/smoothie), and [Rob "Arscan" Scanlon](https://github.com/arscan) for [ENCOM Globe](https://github.com/arscan/encom-globe).
 
 ---
 
 ## Licensing
 
 Licensed under the [GPLv3.0](https://github.com/GitSquared/edex-ui/blob/master/LICENSE).
-
----
-
