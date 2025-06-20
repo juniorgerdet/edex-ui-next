@@ -406,7 +406,11 @@ class Terminal {
                 }
             }, 1000);
 
-            this.tty = this.Pty.spawn(opts.shell || "bash", (opts.params.length > 0 ? opts.params : (process.platform === "win32" ? [] : ["--login"])), {
+            let params = opts.params;
+            if (!Array.isArray(params)) {
+                params = (typeof params === "string" && params.length > 0) ? params.split(" ") : [];
+            }
+            this.tty = this.Pty.spawn(opts.shell || "bash", (params.length > 0 ? params : (process.platform === "win32" ? [] : ["--login"])), {
                 name: opts.env.TERM || "xterm-256color",
                 cols: 80,
                 rows: 24,
