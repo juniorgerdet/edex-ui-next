@@ -123,11 +123,26 @@ class FilesystemDisplay {
             if (this._fsWatcher) {
                 this._fsWatcher.close();
             }
-            this._fsWatcher = fs.watch(dir, (eventType, filename) => {
-                if (eventType != "change") { // #758 - Don't refresh file view if only file contents have changed.
-                    this._runNextTick = true;
-                }
-            });
+            try {
+                this._fsWatcher = fs.watch(dir, (eventType, filename) => {
+                    if (eventType != "change") { // #758 - Don't refresh file view if only file contents have changed.
+                        this._runNextTick = true;
+                    }
+                });
+                this._fsWatcher.on('error', () => {}); // Ignore watcher errors gracefully
+            } catch(e) {
+                console.warn('Failed to watch', dir, e);
+            }
+        };
+
+        this.destroy = () => {
+            clearInterval(this._timer);
+            if (this._fsWatcher) {
+                try {
+                    this._fsWatcher.close();
+                } catch(e) {}
+                this._fsWatcher = null;
+            }
         };
 
         this.toggleHidedotfiles = () => {

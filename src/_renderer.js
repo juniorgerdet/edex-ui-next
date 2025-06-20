@@ -495,6 +495,16 @@ async function initUI() {
         parentId: "filesystem"
     });
 
+    window.addEventListener("unload", () => {
+        if (window.fsDisp) window.fsDisp.destroy();
+    });
+
+    if (module && module.hot) {
+        module.hot.dispose(() => {
+            if (window.fsDisp) window.fsDisp.destroy();
+        });
+    }
+
     await _delay(200);
 
     document.getElementById("filesystem").setAttribute("style", "opacity: 1;");
