@@ -379,6 +379,7 @@ async function initUI() {
     await _delay(10);
 
     document.getElementById("main_shell").setAttribute("style", "");
+    document.getElementById("main_shell").style.opacity = window.settings.shellOpacity || 1;
 
     await _delay(270);
 
@@ -680,6 +681,11 @@ window.openSettings = async () => {
                         <td><input type="number" id="settingsEditor-termFontSize" value="${window.settings.termFontSize}"></td>
                     </tr>
                     <tr>
+                        <td>shellOpacity</td>
+                        <td>Opacity of the main shell (0.0 - 1.0)</td>
+                        <td><input type="number" step="0.1" min="0" max="1" id="settingsEditor-shellOpacity" value="${window.settings.shellOpacity || '1.0'}"></td>
+                    </tr>
+                    <tr>
                         <td>audio</td>
                         <td>Activate audio sound effects</td>
                         <td><select id="settingsEditor-audio">
@@ -839,6 +845,7 @@ window.writeSettingsFile = () => {
         keyboard: document.getElementById("settingsEditor-keyboard").value,
         theme: document.getElementById("settingsEditor-theme").value,
         termFontSize: Number(document.getElementById("settingsEditor-termFontSize").value),
+        shellOpacity: Number(document.getElementById("settingsEditor-shellOpacity").value),
         audio: (document.getElementById("settingsEditor-audio").value === "true"),
         audioVolume: Number(document.getElementById("settingsEditor-audioVolume").value),
         disableFeedbackAudio: (document.getElementById("settingsEditor-disableFeedbackAudio").value === "true"),

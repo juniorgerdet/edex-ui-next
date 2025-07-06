@@ -79,6 +79,7 @@ if (!fs.existsSync(settingsFile)) {
         keyboard: "en-US",
         theme: "tron",
         termFontSize: 15,
+        shellOpacity: 1.0,
         audio: true,
         audioVolume: 1.0,
         disableFeedbackAudio: false,
