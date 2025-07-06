@@ -379,6 +379,7 @@ async function initUI() {
     await _delay(10);
 
     document.getElementById("main_shell").setAttribute("style", "");
+    document.body.style.opacity = window.settings.shellOpacity || 1;
     document.getElementById("main_shell").style.opacity = window.settings.shellOpacity || 1;
 
     await _delay(270);
@@ -682,7 +683,7 @@ window.openSettings = async () => {
                     </tr>
                     <tr>
                         <td>shellOpacity</td>
-                        <td>Opacity of the main shell (0.0 - 1.0)</td>
+                        <td>Opacity of the entire interface (0.0 - 1.0)</td>
                         <td><input type="number" step="0.1" min="0" max="1" id="settingsEditor-shellOpacity" value="${window.settings.shellOpacity || '1.0'}"></td>
                     </tr>
                     <tr>

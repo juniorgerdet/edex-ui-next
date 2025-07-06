@@ -190,7 +190,8 @@ function createWindow(settings) {
         fullscreen: settings.forceFullscreen || false,
         autoHideMenuBar: true,
         frame: settings.allowWindowed || false,
-        backgroundColor: '#000000',
+        transparent: true,
+        backgroundColor: '#00000000',
         webPreferences: {
             devTools: true,
 	    enableRemoteModule: true,
@@ -212,6 +213,7 @@ function createWindow(settings) {
 
     signale.complete("Frontend window created!");
     win.show();
+    win.setOpacity(settings.shellOpacity || 1);
     if (!settings.allowWindowed) {
         win.setResizable(false);
     } else if (!require(lastWindowStateFile)["useFullscreen"]) {
