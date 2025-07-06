@@ -178,7 +178,7 @@ div#main_shell_innercontainer pre#terminal4 {
 }
 
 .xterm .xterm-viewport {
-    background-color: #000;
+    background-color: transparent;
     overflow-y: hidden;
 }
 
